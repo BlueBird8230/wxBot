@@ -70,3 +70,7 @@ qr.png
 *.ini
 *.un~
 /temp
+
+.DS_Store
+*/.DS_Store
+**/.DS_Store
