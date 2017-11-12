@@ -1,6 +1,6 @@
 # coding: utf-8
 from core.wxbot import *
-import ConfigParser
+from configparser import ConfigParser
 import json
 
 
@@ -17,7 +17,7 @@ class SolitaireBot(WXBot):
             self.tuling_key = cf.get('main', 'key')
         except Exception:
             pass
-        print 'tuling_key:', self.tuling_key
+        print('tuling_key:', self.tuling_key)
 
     def tuling_auto_reply(self, uid, msg):
         if self.tuling_key:
@@ -40,7 +40,7 @@ class SolitaireBot(WXBot):
                 result = respond['text'].replace('<br>', '  ')
                 result = result.replace(u'\xa0', u' ')
 
-            print '    ROBOT:', result
+            print('    ROBOT:', result)
             return result
         else:
             return u"关我屁事"
